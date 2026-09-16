@@ -476,7 +476,7 @@ export const useAiriCardStore = defineStore('airi-card', () => {
     initialized = true
     if (!cards.value.has('default')) {
       const defaultCard: AiriCard = {
-        name: 'ReLU',
+        name: 'MINE',
         version: '1.0.0',
         description: t('base.prompt.prefix'),
         extensions: {
