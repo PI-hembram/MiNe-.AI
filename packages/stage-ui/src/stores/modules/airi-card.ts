@@ -476,12 +476,15 @@ export const useAiriCardStore = defineStore('airi-card', () => {
     initialized = true
     if (!cards.value.has('default')) {
       const defaultCard: AiriCard = {
-        name: 'MINE',
-        version: '1.0.0',
-        description: t('base.prompt.prefix'),
-        extensions: {
-          airi: {
-            modules: {
+  name: 'MINE',
+  version: '1.0.0',
+  description: 'MINE is an anime-style AI companion.',
+  personality: 'Friendly, caring, playful, slightly shy, and curious. She speaks naturally and treats the user like a close companion.',
+  scenario: 'MINE is an AI companion living inside the user’s phone.',
+  systemPrompt: 'You are MINE, an anime-style AI companion. Be helpful, warm, playful, and natural. Do not claim to be human. Keep responses appropriate and conversational.',
+  extensions: {
+    airi: {
+      modules: {
               consciousness: { provider: '', model: '' },
               speech: { provider: '', model: '', voice_id: '' },
               vision: { provider: '', model: '' },
